@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF1a1b1e</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#FFFFFFFF</color>
+    <color name="divider">#EFEFEF</color>
+
+    <color name="main">#FF1a1b1e</color>
+    <color name="sub">#FF1a1b1e</color>
+
+    <color name="text_placeholder">#4D000000</color>
+    <color name="text_gray">#818181</color>
+    <color name="background_input">#f8f8f8</color>
+</resources>

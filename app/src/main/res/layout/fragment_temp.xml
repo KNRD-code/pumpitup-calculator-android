@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vm"
+            type="com.rdkn.piu_calc.viewmodel.ScoreEditViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- title -->
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/RankTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            setRankLevelText_rank="@{vm.rankInfo.title}"
+            setRankLevelText_level="@{vm.rankInfo.tLevel}"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_default"
+            android:text="@{@string/rank_score_format(vm.curScore, vm.rankInfo.targetScore)}"
+            app:layout_constraintTop_toTopOf="@id/tv_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- grade -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

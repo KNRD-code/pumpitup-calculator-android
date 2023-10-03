@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="grade"
+            type="String" />
+        <variable
+            name="count"
+            type="Integer" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_grade"
+            style="@style/GradeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{grade}"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_grade_bg"
+            app:layout_constraintTop_toTopOf="@id/ib_plus"
+            app:layout_constraintBottom_toBottomOf="@id/ib_plus"
+            app:layout_constraintStart_toStartOf="@id/ib_minus"
+            app:layout_constraintEnd_toEndOf="@id/ib_plus" />
+        <EditText
+            android:id="@+id/et_count"
+            style="@style/GradeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:ems="3"
+            android:text="@={`` + count}"
+            app:layout_constraintTop_toTopOf="@id/ib_plus"
+            app:layout_constraintBottom_toBottomOf="@id/ib_plus"
+            app:layout_constraintEnd_toStartOf="@id/ib_plus" />
+        <ImageButton
+            android:id="@+id/ib_plus"
+            style="@style/ImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_small"
+            android:src="@drawable/ic_plus"
+            android:contentDescription="@string/img_desc_plus"
+            app:layout_constraintTop_toTopOf="@id/tv_grade"
+            app:layout_constraintBottom_toBottomOf="@id/tv_grade"
+            app:layout_constraintEnd_toEndOf="@id/tv_grade"/>
+        <ImageButton
+            android:id="@+id/ib_minus"
+            style="@style/ImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_minus"
+            android:contentDescription="@string/img_desc_minus"
+            app:layout_constraintTop_toTopOf="@id/ib_plus"
+            app:layout_constraintBottom_toBottomOf="@id/ib_plus"
+            app:layout_constraintEnd_toStartOf="@id/et_count"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

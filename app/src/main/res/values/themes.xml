@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PUMPCalc" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Theme.PUMPCalc" parent="Base.Theme.PUMPCalc" />
+
+    <!-- Text -->
+    <style name="BaseTextStyle">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CommonText" parent="BaseTextStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CommonText.Gray">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="RankTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">@dimen/padding_default</item>
+        <item name="android:background">@drawable/shape_rank_title_bg</item>
+        <item name="android:foreground">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="RankLevel">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:foreground">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="GradeTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="GradeCount">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_grade_count_bg</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="ImageBtn">
+        <item name="android:background">@null</item>
+        <item name="android:foreground">@drawable/shape_ripple_white</item>
+    </style>
+
+    <style name="CommonEditText">
+        <item name="android:layout_marginHorizontal">@dimen/margin_contents</item>
+        <item name="android:background">@drawable/shape_common_input_bg</item>
+        <item name="android:paddingVertical">15dp</item>
+        <item name="android:paddingHorizontal">@dimen/padding_default</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/text_placeholder</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="CommonEditText.Wrap">
+        <item name="android:layout_marginHorizontal">0dp</item>
+    </style>
+
+    <style name="CommonEditLabel" parent="BaseTextStyle">
+        <item name="android:layout_marginStart">@dimen/margin_contents</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Button -->
+    <style name="BaseButtonStyle">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="CommonSubmitButton" parent="BaseButtonStyle">
+        <item name="android:layout_marginHorizontal">@dimen/margin_contents</item>
+        <item name="android:layout_marginBottom">@dimen/margin_contents</item>
+        <item name="android:paddingVertical">@dimen/padding_default</item>
+        <item name="android:colorBackground">@color/main</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/common_radius</item>
+        <item name="strokeColor">@android:color/transparent</item>
+    </style>
+</resources>

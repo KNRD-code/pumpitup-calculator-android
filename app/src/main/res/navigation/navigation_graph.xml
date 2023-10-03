@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/main_home">
+
+    <fragment
+        android:id="@+id/main_home"
+        android:name="com.rdkn.piu_calc.fragment.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/main_my_page"
+        android:name="com.rdkn.piu_calc.fragment.MyPageFragment"
+        android:label="MyPageFragment" />
+    <fragment
+        android:id="@+id/main_temp"
+        android:name="com.rdkn.piu_calc.fragment.TempFragment"
+        android:label="MyPageFragment" />
+</navigation>

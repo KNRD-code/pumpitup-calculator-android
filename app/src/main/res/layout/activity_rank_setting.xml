@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="rankSet"
+            type="com.rdkn.piu_calc.activity.RankSettingActivity" />
+        <variable
+            name="rating"
+            type="com.rdkn.piu_calc.common.RatingManager" />
+        <variable
+            name="vm"
+            type="com.rdkn.piu_calc.viewmodel.RankSettingViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_expert"
+            style="@style/RankTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rank_expert"
+            android:onClick="@{() -> rankSet.titleSelect(rating.EXPERT)}"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_expert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rank_title_bg"
+            isVisible="@{vm.rTitle.equals(rating.EXPERT)}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_expert"/>
+
+        <TextView
+            android:id="@+id/tv_advanced"
+            style="@style/RankTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rank_advanced"
+            android:onClick="@{() -> rankSet.titleSelect(rating.ADVANCED)}"
+            app:layout_constraintTop_toBottomOf="@id/rv_expert"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_advanced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rank_title_bg"
+            isVisible="@{vm.rTitle.equals(rating.ADVANCED)}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_advanced"/>
+
+        <TextView
+            android:id="@+id/tv_intermediate"
+            style="@style/RankTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rank_intermediate"
+            android:onClick="@{() -> rankSet.titleSelect(rating.INTERMEDIATE)}"
+            app:layout_constraintTop_toBottomOf="@id/rv_advanced"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_intermediate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rank_title_bg"
+            isVisible="@{vm.rTitle.equals(rating.INTERMEDIATE)}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_intermediate"/>
+
+        <TextView
+            android:id="@+id/tv_beginner"
+            style="@style/RankTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rank_beginner"
+            android:onClick="@{() -> rankSet.titleSelect(rating.BEGINNER)}"
+            app:layout_constraintTop_toBottomOf="@id/rv_intermediate"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
